@@ -1,0 +1,75 @@
+<section class="hero">
+  <div class="container hero-content">
+    <div class="animate-slide-up delay-100" style="margin-bottom: 1.5rem;">
+      <span class="badge">Innovation at Scale</span>
+    </div>
+    <h1 class="title animate-slide-up delay-200">Engineering the Future of <br> <span class="gradient-text">Smart Software</span></h1>
+    <p class="subtitle animate-slide-up delay-300" style="max-width: 600px; margin-left: auto; margin-right: auto;">We are a premier software studio crafting scalable, efficient, and intelligent applications designed to accelerate your business growth.</p>
+    <div class="hero-actions animate-slide-up delay-400">
+      <a routerLink="/projects" class="btn btn-primary glow-on-hover">Explore Our Portfolio</a>
+      <a routerLink="/contact" class="btn btn-outline">Start Your Project</a>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Section -->
+<section class="section stats-container" style="padding-top: 0;">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item animate-scale-in" [style.animationDelay]="i * 150 + 'ms'" *ngFor="let stat of stats; let i = index">
+        <h3 class="stat-value">{{ stat.value }}</h3>
+        <p class="stat-label">{{ stat.label }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section services-preview bg-light">
+  <div class="container">
+    <div class="section-header text-center animate-slide-up">
+      <h2 class="gradient-text">Core Capabilities</h2>
+      <p>Delivering enterprise-grade solutions across technological domains.</p>
+    </div>
+    <div class="grid">
+      <div class="card card-animated animate-scale-in" [style.animationDelay]="i * 100 + 'ms'" *ngFor="let service of services; let i = index">
+        <div class="card-inner">
+          <div class="icon animate-float">{{ service.icon }}</div>
+          <h3>{{ service.title }}</h3>
+          <p>{{ service.desc }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section projects-preview">
+  <div class="container">
+    <div class="section-header text-center animate-slide-up">
+      <h2 class="gradient-text">Featured Success Stories</h2>
+      <p>Explore robust ecosystems we've successfully architected.</p>
+    </div>
+    <div class="grid">
+      <div class="card card-animated animate-slide-left" [style.animationDelay]="i * 150 + 'ms'" *ngFor="let project of projects; let i = index">
+        <div class="card-inner">
+          <div class="project-indicator">
+            <span class="indicator-dot animate-pulse"></span> Live
+          </div>
+          <h3>{{ project.title }}</h3>
+          <p>{{ project.desc }}</p>
+          <a routerLink="/projects" class="arrow-link" style="margin-top: auto;">Explore Details &rarr;</a>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-4 animate-slide-up delay-300">
+      <a routerLink="/projects" class="btn btn-outline">View Complete Portfolio</a>
+    </div>
+  </div>
+</section>
+
+<section class="section cta bg-primary animate-fade-in">
+  <div class="container text-center">
+    <h2 class="animate-slide-up">Ready to Transform Your Business?</h2>
+    <p class="animate-slide-up delay-100" style="color: rgba(255,255,255,0.9); max-width: 600px; margin: 0 auto 2rem;">Join industry leaders who rely on AIIT Sofft for secure, scalable, and beautifully designed digital infrastructure.</p>
+    <a routerLink="/contact" class="btn btn-pill bg-white text-primary animate-scale-in delay-200" style="padding: 1rem 2rem; font-size: 1.125rem;">Consult with our Experts</a>
+  </div>
+</section>

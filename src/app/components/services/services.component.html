@@ -1,0 +1,19 @@
+<section class="section bg-light">
+  <div class="container container-md">
+    <div class="section-header text-center animate-slide-up">
+      <h1 class="title">Our Services</h1>
+      <p class="subtitle">Comprehensive technology solutions designed to empower your business operations.</p>
+    </div>
+    
+    <div class="services-grid">
+      <div class="card card-animated animate-slide-up" [style.animationDelay]="i * 150 + 'ms'" *ngFor="let service of allServices; let i = index">
+        <div class="card-inner">
+          <div class="icon animate-float">{{ service.icon }}</div>
+          <h3>{{ service.title }}</h3>
+          <p>{{ service.desc }}</p>
+          <a href="javascript:void(0)" class="learn-more">Learn more &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

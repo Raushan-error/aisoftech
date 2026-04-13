@@ -1,0 +1,38 @@
+.footer {
+  background-color: #1e293b;
+  color: white;
+  padding: 3rem 0;
+  margin-top: 4rem;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .footer-content {
+    flex-direction: row;
+    text-align: left;
+  }
+}
+
+.brand h3 {
+  color: white;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.brand p {
+  color: #94a3b8;
+  margin: 0;
+}
+
+.copyright {
+  color: #94a3b8;
+  font-size: 0.875rem;
+}
