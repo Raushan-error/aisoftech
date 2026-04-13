@@ -1,0 +1,215 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--surface-color);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  box-shadow: var(--shadow-sm);
+  transition: background-color var(--transition-normal), ease-in-out var(--transition-normal);
+}
+
+[data-theme="dark"] .navbar {
+  background-color: rgba(30, 41, 59, 0.95);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+  gap: 0.5rem;
+}
+
+.logo-image {
+  height: 40px;
+  width: auto;
+  border-radius: 4px;
+  transition: transform var(--transition-fast);
+}
+
+.logo:hover .logo-image {
+  transform: scale(1.05) rotate(-2deg);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-secondary);
+  font-weight: 500;
+  position: relative;
+  transition: color var(--transition-fast), transform var(--transition-fast);
+}
+
+.nav-links a:not(.btn)::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--primary-color);
+  transition: width var(--transition-normal);
+}
+
+.nav-links a:hover:not(.btn)::after,
+.nav-links a.active-link:not(.btn)::after {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+.nav-links a.active-link {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.contact-btn {
+  padding: 0.6rem 1.5rem !important;
+  font-weight: 600 !important;
+  border-radius: 9999px !important; /* Fully rounded pill shape */
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-hover));
+  color: white !important;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.contact-btn::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(135deg, #10b981, #3b82f6);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.contact-btn:hover::before {
+  opacity: 1;
+}
+
+.theme-toggle {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: transform var(--transition-fast), background-color var(--transition-fast);
+  color: var(--text-primary);
+}
+
+.theme-toggle:hover {
+  transform: rotate(15deg) scale(1.1);
+  background-color: var(--surface-hover);
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+}
+
+.menu-toggle .bar {
+  height: 3px;
+  width: 100%;
+  background-color: var(--secondary-color);
+  border-radius: 3px;
+  transition: all var(--transition-normal);
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: var(--surface-color);
+    flex-direction: column;
+    padding: 2rem 0;
+    box-shadow: var(--shadow-md);
+    clip-path: circle(0px at 100% -100%);
+    transition: all 0.4s ease-out;
+  }
+
+  .nav-links.active {
+    clip-path: circle(150% at 100% -100%);
+  }
+
+  .menu-toggle .bar.open:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+  .menu-toggle .bar.open:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-toggle .bar.open:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: var(--surface-color);
+    flex-direction: column;
+    padding: 2rem 0;
+    box-shadow: var(--shadow-md);
+    clip-path: circle(0px at 100% -100%);
+    transition: all 0.4s ease-out;
+  }
+
+  .nav-links.active {
+    clip-path: circle(150% at 100% -100%);
+  }
+
+  .menu-toggle .bar.open:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+  .menu-toggle .bar.open:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-toggle .bar.open:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+}

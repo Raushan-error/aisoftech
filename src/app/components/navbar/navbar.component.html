@@ -1,0 +1,33 @@
+<header class="navbar animate-slide-up">
+  <div class="container navbar-container">
+    <a routerLink="/" class="logo animate-scale-in delay-100">
+      <img src="logo.png" alt="AIIT Sofft Logo" class="logo-image" />
+      <span class="logo-text">AIIT Sofft</span>
+    </a>
+
+    <!-- Hamburger menu for mobile -->
+    <button class="menu-toggle" (click)="toggleMenu()" aria-label="Toggle navigation">
+      <span class="bar" [class.open]="isMenuOpen"></span>
+      <span class="bar" [class.open]="isMenuOpen"></span>
+      <span class="bar" [class.open]="isMenuOpen"></span>
+    </button>
+
+    <!-- Desktop & Mobile navigation -->
+    <nav class="nav-links" [class.active]="isMenuOpen">
+      <a routerLink="/home" routerLinkActive="active-link" (click)="isMenuOpen = false" class="animate-slide-up delay-100">Home</a>
+      <a routerLink="/about" routerLinkActive="active-link" (click)="isMenuOpen = false" class="animate-slide-up delay-200">About</a>
+      <a routerLink="/services" routerLinkActive="active-link" (click)="isMenuOpen = false" class="animate-slide-up delay-300">Services</a>
+      <a routerLink="/projects" routerLinkActive="active-link" (click)="isMenuOpen = false" class="animate-slide-up delay-400">Projects</a>
+      
+      <!-- Theme Toggle Button -->
+      <button class="theme-toggle animate-slide-up delay-500" (click)="toggleTheme()" aria-label="Toggle Dark Mode">
+        <span *ngIf="themeService.isDarkMode()">☀️</span>
+        <span *ngIf="!themeService.isDarkMode()">🌙</span>
+      </button>
+
+      <a routerLink="/contact" routerLinkActive="active-link" class="btn btn-pill contact-btn animate-scale-in delay-600 glow-on-hover" (click)="isMenuOpen = false">
+        <span>Contact Us</span>
+      </a>
+    </nav>
+  </div>
+</header>
