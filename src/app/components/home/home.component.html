@@ -50,6 +50,9 @@
     </div>
     <div class="grid">
       <div class="card card-animated animate-slide-left" [style.animationDelay]="i * 150 + 'ms'" *ngFor="let project of projects; let i = index">
+        <div class="project-logo-banner">
+          <img [src]="project.logo" [alt]="project.title + ' logo'" class="home-project-logo animate-float" />
+        </div>
         <div class="card-inner">
           <div class="project-indicator">
             <span class="indicator-dot animate-pulse"></span> Live
@@ -69,7 +72,7 @@
 <section class="section cta bg-primary animate-fade-in">
   <div class="container text-center">
     <h2 class="animate-slide-up">Ready to Transform Your Business?</h2>
-    <p class="animate-slide-up delay-100" style="color: rgba(255,255,255,0.9); max-width: 600px; margin: 0 auto 2rem;">Join industry leaders who rely on AIIT Sofft for secure, scalable, and beautifully designed digital infrastructure.</p>
+    <p class="animate-slide-up delay-100" style="color: rgba(255,255,255,0.9); max-width: 600px; margin: 0 auto 2rem;">Join industry leaders who rely on AIITSofft for secure, scalable, and beautifully designed digital infrastructure.</p>
     <a routerLink="/contact" class="btn btn-pill bg-white text-primary animate-scale-in delay-200" style="padding: 1rem 2rem; font-size: 1.125rem;">Consult with our Experts</a>
   </div>
 </section>

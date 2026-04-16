@@ -9,7 +9,7 @@
       <div class="card card-animated animate-slide-up" [style.animationDelay]="i * 200 + 'ms'" *ngFor="let project of projects; let i = index">
         <div class="card-inner" style="padding:0;">
           <div class="project-img-placeholder">
-            <span class="icon animate-float">{{ project.image }}</span>
+            <img [src]="project.logo" [alt]="project.title + ' logo'" class="project-logo animate-float" />
           </div>
           <div class="project-content">
             <h3>{{ project.title }}</h3>

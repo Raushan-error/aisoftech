@@ -11,16 +11,16 @@ import { CommonModule } from '@angular/common';
 export class ProjectsComponent {
   projects = [
     { 
-      title: 'Volleyball of India', 
-      desc: 'Platform to manage volleyball data and operations globally.',
+      title: 'Volleyball Federation of India', 
+      desc: 'Platform to manage volleyball federation data and operations across India, including registrations, events, and reporting.',
       tags: ['Angular', '.NET Core', 'SQL Server'],
-      image: '📊'
+      logo: 'Volleyball.png'
     },
     { 
       title: 'SGFI (School Games Federation of India)', 
-      desc: 'Enterprise system for managing school sports events, student data, and scheduling.',
-      tags: ['React', 'Node.js', 'MongoDB'],
-      image: '🏅'
+      desc: 'Enterprise system for managing school sports events, student data, scheduling, and mobile access for participants across India.',
+      tags: ['Angular', '.NET Core', 'SQL Server'],
+      logo: 'sgfi.png'
     }
   ];
 }
