@@ -11,5 +11,5 @@ import { FooterComponent } from './components/footer/footer.component';
   styleUrl: './app.css'
 })
 export class App {
-  title = 'AIIT Sofft';
+  title = 'AIITSofft';
 }
